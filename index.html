@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Per har betalt:<input type="number" id="per"><br />
+    Pål har betalt:<input type="number" id="pål"><br />
+    Espen har betalt:<input type="number" id="espen"><br />
+
+
+    <button onclick="calculate()">Beregne</button>
+    <div id="app"></div>
+    <script>
+        function calculate() {
+            let amountPaidPer = document.getElementById;
+            let amountPaidPål = 300;
+            let amountPaidEspen = 0;
+            let totalAmountPaid = amountPaidPer + amountPaidPål + amountPaidEspen;
+            let costPerPerson = totalAmountPaid / 3;
+            let owesPer = costPerPerson - amountPaidPer;
+            let owesPål = costPerPerson - amountPaidPål;
+            let owesEspen = costPerPerson - amountPaidEspen;
+
+            document.getElementById('app').innerHTML = /*HTML*/`
+
+    Per har betalt: ${amountPaidPer}<br/>
+    Pål har betalt: ${amountPaidPål}<br/>
+    Espen har betalt: ${amountPaidEspen}<br/>
+    Sum betalt: ${totalAmountPaid}<br/>
+    kostand per person: ${costPerPerson} <br/>
+    Per skylder: ${owesPer}<br/>
+    Pål skylder: ${owesPål}<br/>
+    Espen skylder: ${owesEspen}<br/>
+
+        
+        
+
+
+`;
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
